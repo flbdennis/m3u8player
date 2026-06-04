@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Local notes and temporary files
+tmp/
+output/
+*.log
+
