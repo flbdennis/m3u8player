@@ -51,27 +51,27 @@ MetisTools 可用于在浏览器中测试公开或已授权的 M3U8/HLS 链接�
 
 ## 推荐阅读顺序
 
-1. [Public M3U8 Test Stream Checklist](guides/public-test-stream-checklist.md)
-2. [How to Test an M3U8 Stream in a Browser](guides/test-m3u8-stream-in-browser.md)
-3. [M3U8 Playlist Basics for Browser Playback](guides/m3u8-playlist-basics.md)
-4. [M3U8 CORS Error: What to Check First](guides/m3u8-cors-error.md)
-5. [HLS Not Playing in Chrome: Practical Checks](guides/hls-not-playing-in-chrome.md)
+1. [公开 M3U8 测试流检查清单](guides/zh/public-m3u8-test-stream-checklist.md)
+2. [如何在浏览器中测试 M3U8 流](guides/zh/test-m3u8-stream-in-browser.md)
+3. [M3U8 播放列表基础：Master、Media 和分片](guides/zh/m3u8-playlist-basics.md)
+4. [M3U8 CORS 错误排查：先看这几个地方](guides/zh/m3u8-cors-error.md)
+5. [HLS 在 Chrome 里无法播放：实用排查步骤](guides/zh/hls-not-playing-in-chrome.md)
 
 ## 浏览器播放测试指南
 
-- [How to Test an M3U8 Stream in a Browser](guides/test-m3u8-stream-in-browser.md)
-- [Safari HLS vs Chrome HLS: Browser Playback Differences](guides/safari-hls-vs-chrome-hls.md)
-- [HLS Not Playing in Chrome: Practical Checks](guides/hls-not-playing-in-chrome.md)
-- [M3U8 CORS Error: What to Check First](guides/m3u8-cors-error.md)
-- [M3U8 Playlist Basics for Browser Playback](guides/m3u8-playlist-basics.md)
-- [Public M3U8 Test Stream Checklist](guides/public-test-stream-checklist.md)
+- [如何在浏览器中测试 M3U8 流](guides/zh/test-m3u8-stream-in-browser.md)
+- [Safari HLS 和 Chrome HLS 的区别](guides/zh/safari-hls-vs-chrome-hls.md)
+- [HLS 在 Chrome 里无法播放：实用排查步骤](guides/zh/hls-not-playing-in-chrome.md)
+- [M3U8 CORS 错误排查：先看这几个地方](guides/zh/m3u8-cors-error.md)
+- [M3U8 播放列表基础：Master、Media 和分片](guides/zh/m3u8-playlist-basics.md)
+- [公开 M3U8 测试流检查清单](guides/zh/public-m3u8-test-stream-checklist.md)
 
 ## 开发者资源
 
-- [Embed an M3U8 Player on Your Site](guides/embed-m3u8-player-on-your-site.md)
-- [Open Source M3U8 Player Libraries](guides/open-source-m3u8-player-libraries.md)
+- [如何在网站中嵌入 M3U8 播放器](guides/zh/embed-m3u8-player-on-your-site.md)
+- [开源 M3U8 播放器方案：hls.js、video.js 和在线测试工具](guides/zh/open-source-m3u8-player-libraries.md)
 
-这些内容的目的不是只推广一个在线播放器页面，而是帮助开发者理解如何安全嵌入播放器，以及如何选择适合自己的 M3U8/HLS 播放方案。
+这些内容不是英文指南的逐句翻译，而是按中文用户常搜的 `M3U8 在线播放器`、`M3U8 CORS`、`vue播放m3u8`、`hls.js 播放器`、`m3u8 player` 等表达重新整理。目标是让中文读者能快速理解浏览器播放限制、源站配置和安全测试边界。
 
 ## 快速测试流程
 
@@ -103,7 +103,7 @@ MetisTools 可用于在浏览器中测试公开或已授权的 M3U8/HLS 链接�
 
 如果你在 iframe 中传入具体流地址，只应使用公开或已授权的链接。iframe 嵌入不会隐藏、代理或保护原始媒体 URL。
 
-参考：[Embed an M3U8 Player on Your Site](guides/embed-m3u8-player-on-your-site.md)
+参考：[如何在网站中嵌入 M3U8 播放器](guides/zh/embed-m3u8-player-on-your-site.md)
 
 ## 推荐 GitHub Topics
 
