@@ -1,36 +1,49 @@
-# M3U8 Player Notes
+# MetisTools M3U8 Player
 
-Practical notes for testing M3U8/HLS playback in modern browsers.
+[English](./README.md) | [简体中文](./README.zh-CN.md)
 
-This repository is a lightweight resource hub for developers, site owners, and technical users who need to check whether an M3U8/HLS stream can play in a browser. It focuses on browser playback behavior, playlist loading, segment requests, CORS, MIME types, codec support, CDN behavior, embed usage, and common playback errors.
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-MetisTools-7c3aed?style=for-the-badge)](https://metistools.com/m3u8-player)
+[![M3U8](https://img.shields.io/badge/M3U8-HLS%20Playback-2563eb?style=for-the-badge)](https://metistools.com/m3u8-player)
+[![Browser Based](https://img.shields.io/badge/Browser-Based-16a34a?style=for-the-badge)](https://metistools.com/)
+[![License](https://img.shields.io/badge/License-MIT-f59e0b?style=for-the-badge)](./LICENSE)
 
-Live tool:
+A practical M3U8/HLS playback testing resource for developers, site owners, and technical users.
 
-- M3U8 Player Online: https://metistools.com/m3u8-player
-- MP4 Player Online: https://metistools.com/mp4-player
-- DASH Player Online: https://metistools.com/dash-player
-- Guides: https://metistools.com/guides
+MetisTools helps you test public or authorized M3U8/HLS links directly in the browser, review playback logs, and understand common browser-side stream issues such as CORS, expired URLs, MIME types, codecs, and source-server access rules.
+
+<p align="center">
+  <a href="https://metistools.com/m3u8-player">
+    <img src="./assets/metistools-m3u8-player-en.webp" alt="MetisTools M3U8 Player Online screenshot" width="780">
+  </a>
+</p>
+
+## Live tools
+
+| Tool | Use case |
+|---|---|
+| [M3U8 Player Online](https://metistools.com/m3u8-player) | Test public or authorized HLS/M3U8 playback in the browser. |
+| [MP4 Player Online](https://metistools.com/mp4-player) | Check direct MP4 video links and browser playback support. |
+| [DASH Player Online](https://metistools.com/dash-player) | Test DASH/MPD playback in the browser. |
+| [Guides](https://metistools.com/guides) | Learn how browser playback, CORS, codecs, and stream URLs work. |
 
 ## What this repository is for
 
 Use these notes when you need to:
 
-- Test a public or authorized M3U8/HLS stream in a browser.
-- Check why a stream works in Safari or VLC but fails in Chrome.
-- Understand CORS, MIME type, codec, HTTPS, signed URL, and segment request issues.
+- Test whether an M3U8/HLS stream can play in a modern browser.
+- Check why a stream works in Safari or VLC but fails in Chrome or Edge.
+- Review CORS, MIME type, codec, HTTPS, signed URL, and segment-loading issues.
 - Embed a lightweight M3U8 player on a page you control.
-- Compare common open source player libraries before building your own web player.
-- Document safe playback testing workflows for public or authorized streams.
+- Compare common open source playback libraries before building your own web player.
+- Document a safe workflow for testing public or authorized streams.
 
 ## What this repository is not for
 
 This repository does not cover:
 
-- Video downloading.
-- Stream ripping.
-- DRM bypassing.
-- Login, cookie, token, or paywall workarounds.
-- Private access extraction.
+- Video downloading or stream ripping.
+- DRM bypassing or decryption workarounds.
+- Login, cookie, token, paywall, or private-access bypasses.
 - Copyright-restricted redistribution.
 - “Download any video” workflows.
 
@@ -60,19 +73,17 @@ Recommended reading order:
 - [Embed an M3U8 Player on Your Site](guides/embed-m3u8-player-on-your-site.md)
 - [Open Source M3U8 Player Libraries](guides/open-source-m3u8-player-libraries.md)
 
-These developer resources are meant to make the repository useful beyond one online player page. They explain how to embed a player safely and how to choose a playback library when building your own implementation.
+These resources make the repository useful beyond a single online player page. They explain how to embed a player safely and how to choose a playback library when building your own implementation.
 
 ## Quick browser test workflow
 
-Use this workflow before changing player code:
-
-1. Confirm that the URL is a direct `.m3u8` playlist, not a video webpage.
-2. Confirm that the stream is public or you are authorized to test it.
-3. Open the URL in the MetisTools M3U8 Player.
+1. Confirm that the URL is a direct `.m3u8` playlist, not a normal video webpage.
+2. Confirm that the stream is public or that you are authorized to test it.
+3. Open the URL in [MetisTools M3U8 Player](https://metistools.com/m3u8-player).
 4. Compare Chrome or Edge with Safari if the result is unclear.
-5. Check whether the playlist, media playlist, and segments load.
+5. Check whether the playlist, media playlist, and media segments load.
 6. Record HTTP status codes, CORS messages, MIME type, codec information, and whether the URL is signed or temporary.
-7. Fix the source server or CDN configuration where needed.
+7. Fix the source server or CDN configuration when needed.
 
 ## Embed example
 
@@ -92,13 +103,11 @@ Use the empty embed player when you want users to paste their own public or auth
 </iframe>
 ```
 
-If you include a stream URL, use only public or authorized links and remember that iframe embedding does not hide, proxy, or protect the original media URL.
+If you include a stream URL, use only public or authorized links. Iframe embedding does not hide, proxy, or protect the original media URL.
 
 See: [Embed an M3U8 Player on Your Site](guides/embed-m3u8-player-on-your-site.md)
 
 ## Recommended GitHub topics
-
-If you use this as a public GitHub project, add topics such as:
 
 ```text
 m3u8
